@@ -1,3 +1,6 @@
+// Renders username and text in divs
+// Escapes input to protect against XSS attacks
+
 var MessageView = {
   render: _.template(`
       <div class="chat">

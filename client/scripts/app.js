@@ -18,14 +18,16 @@ var App = {
   fetch: function(callback = () => {}) {
     Parse.readAll(data => {
       // examine the response from the server request:
-      console.log(data.results[0].username);
+      // console.log(data.results[0].username);
 
-      for (let i = 0; i < data.results.length; i++) {
-        console.log(
-          `this is all of our data usernames ${data.results[i].username}`
-        );
-      }
-
+      // for (let i = 0; i < data.results.length; i++) {
+      //   console.log(
+      //     `this is all of our data usernames ${data.results[i].username}`
+      //   );
+      // }
+      console.log(data);
+      console.log(data.results);
+      MessagesView.render(data.results);
       callback();
     });
   },
