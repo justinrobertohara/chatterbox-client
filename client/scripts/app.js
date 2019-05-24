@@ -25,11 +25,15 @@ var App = {
       //     `this is all of our data usernames ${data.results[i].username}`
       //   );
       // }
-      console.log(data);
-      console.log(data.results);
-      MessagesView.render(data.results);
-      callback();
+
+      // push data into storage array
+      Messages.messagesArray.push(data.results);
+
+      console.log(`This is our stored messages ${Messages.messagesArray}`);
+      // console.log(data.results);
+      // MessagesView.render(data.results);
     });
+    callback();
   },
 
   startSpinner: function() {

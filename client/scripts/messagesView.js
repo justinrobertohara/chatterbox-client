@@ -28,15 +28,13 @@ var MessagesView = {
   renderMessage: function(message) {
     // go into messageView
     // edge case
-
-    if (message.username === null || message.text === null) {
-      console.log('usernames and/or text is null');
-      return;
-    }
-
+    // if (message.username === null || message.text === null) {
+    //   console.log('usernames and/or text is null');
+    //   return;
+    // }
     // use render method with template literals for chat, username, message
-    var chat = MessageView.render(message);
+    // var chat = MessageView.render(message);
     // add to DOM (append or prepend)
-    this.$chats.prepend(chat);
+    // this.$chats.prepend(chat);
   }
 };

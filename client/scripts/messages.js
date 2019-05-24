@@ -1,1 +1,4 @@
-var Messages = {};
+var Messages = {
+  // instantiate storage array
+  messagesArray: []
+};
