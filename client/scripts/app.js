@@ -18,22 +18,10 @@ var App = {
   fetch: function(callback = () => {}) {
     Parse.readAll(data => {
       // examine the response from the server request:
-      // console.log(data.results[0].username);
+      console.log(data);
 
-      // for (let i = 0; i < data.results.length; i++) {
-      //   console.log(
-      //     `this is all of our data usernames ${data.results[i].username}`
-      //   );
-      // }
-
-      // push data into storage array
-      Messages.messagesArray.push(data.results);
-
-      console.log(`This is our stored messages ${Messages.messagesArray}`);
-      // console.log(data.results);
-      // MessagesView.render(data.results);
+      callback();
     });
-    callback();
   },
 
   startSpinner: function() {
