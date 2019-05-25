@@ -10,7 +10,8 @@ var FormView = {
     event.preventDefault();
 
     // we might need to
-    console.log(event);
+    console.log(event.value);
+    // console.log(event.currenttarget.value);
   },
 
   setStatus: function(active) {

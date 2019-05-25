@@ -10,7 +10,6 @@ var RoomsView = {
     if (!room) {
       room = 'main';
     }
-    console.log(room);
 
     // $(room).appendChild(RoomsView.$select);
 
