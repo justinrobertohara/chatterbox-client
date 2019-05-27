@@ -13,6 +13,9 @@ var App = {
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
+
+    // Get new messages every second
+    // setInterval(App.fetch, 1000);
   },
 
   fetch: function(callback = () => {}) {

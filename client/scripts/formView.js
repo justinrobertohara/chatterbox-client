@@ -10,8 +10,21 @@ var FormView = {
     event.preventDefault();
 
     // we might need to
-    console.log(event.value);
-    // console.log(event.currenttarget.value);
+    // console.log(FormView.$form.find('#message').val());
+
+    var message = {
+      username: App.username,
+      text: FormView.$form.find('#message').val(),
+      roomname: 'lobby'
+    };
+
+    Parse.create(message);
+    // setTimeout(location.reload(true), 1000);
+
+    // requires double-click to reload page and display submitted messag
+    FormView.$form.on('click', function() {
+      location.reload(true);
+    });
   },
 
   setStatus: function(active) {
@@ -19,3 +32,15 @@ var FormView = {
     FormView.$form.find('input[type=submit]').attr('disabled', status);
   }
 };
+
+// var message = {
+//   username: App.username,
+//   text: FormView.$form.find('#message').val(),
+//   roomname: Rooms.selected || 'lobby'
+// };
+
+// Parse.create(message, (data) => {
+//   _.extend(message, data);
+//   Messages.add(message, MessagesView.render);
+// });
+//   },
